@@ -1,14 +1,16 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+
+import {TailwindProvider} from 'tailwind-rn';
+import utilities from './tailwind.json';
+
+import {Test} from './src/Test';
 
 const App = () => {
   return (
-    <View>
-      <Text>
-        Hello World
-      </Text>
-    </View>
-  )
+    <TailwindProvider utilities={utilities}>
+      <Test />
+    </TailwindProvider>
+  );
 };
 
 export default App;
